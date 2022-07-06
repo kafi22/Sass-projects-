@@ -1,0 +1,45 @@
+
+
+// RESPONSIVE LAYOUT VARIABLES 
+
+$desktop:1050px;
+$laptop: 850px;
+$tablet: 768px;
+$mobile:550px;
+
+
+
+
+@mixin desktop {
+
+      @media only screen and (max-width: #{$desktop}){
+            @content;
+            
+      }
+};
+
+@mixin laptop {
+
+      @media only screen and (max-width: #{$laptop}){
+            @content;
+      }
+};
+
+@mixin tablet {
+      @media only screen and (max-width: #{$tablet}){
+            @content;
+      }
+};
+
+@mixin mobile {
+      @media only screen and (max-width: #{$mobile}){
+            
+            @content;
+      }
+};
+
+
+// DESKTOP VERSION 
+
+
+

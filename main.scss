@@ -1,0 +1,321 @@
+@import "variable";
+@import "utility";
+@import "responsive";
+
+
+
+html {
+      font-size: 100%;
+
+      @include desktop {
+            font-size: 75%;
+      };
+
+      @include laptop {
+            font-size: 65%;
+      };
+
+      @include tablet {
+            font-size: 55%;
+      };
+
+      @include mobile {
+            font-size: 50%;
+      }
+      
+};
+
+body {
+      .poly-img-1 {
+           position: absolute;
+           top: 20%;
+           left: 0%;
+
+           @include tablet {
+            top: 5%;
+            left: 0%;
+
+           }
+          
+
+            img {
+                  height: auto;
+                  width: 200px;
+                  object-fit: cover;
+
+                  @include tablet {
+                        height: auto;
+                        width: 120px;
+                  }
+            }
+
+            
+      }
+
+     
+};
+
+header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: auto;
+      padding: 0.5rem 1.5rem;
+
+      .logo {
+            font-size: $font-size-bg;
+            font-weight: 700;
+            color: $text-color-b;
+            text-transform: uppercase;
+
+            span {
+                  color: $color-secondary;
+            }
+      }
+
+      .main-ul,
+      .second-ul {
+            display: flex;
+            align-items: center;
+
+            li {
+                  margin: 0 0.6rem;
+            }
+
+            a {
+                  font-size: $font-size-little-sm;
+                  font-weight: 400;
+                  color: $text-color-a;
+            }
+      }
+
+      .btn i {
+            margin-left: 0.3rem;
+      }
+}
+
+section {
+      padding: 4rem 0;
+}
+
+.hero-sec {
+      .wrapper {
+            @include wrapper-style;
+      }
+
+      .flex {
+
+            @include tablet {
+                  flex-direction: column;
+                  
+            }
+      }
+
+      .hero-text {
+            flex: 1 1 50%;
+            position: relative;
+
+            @include tablet {
+                  text-align: center;
+            }
+
+            h1 {
+                  font-size: $font-size-ext-big;
+                  line-height: 2.8rem;
+                  letter-spacing: 0.3rem;
+                  margin: 0 0 1.5rem 0;
+                  position: relative;
+                
+                  @include tablet {
+                        margin-bottom: 3rem;
+                  }
+            }
+            h1::after {
+                  background: url(/images/Group.png);
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                  position: absolute;
+                  width: 15rem;
+                  height: 2rem;
+                  content: "";
+                  bottom: -25%;
+                  right: 15%;
+                  
+
+                  @include tablet {
+                        width: 15rem;
+                        height: 2rem;
+                        bottom: -25%;
+                        right: 20%;
+                  }
+                 
+            }
+            p {
+                  font-size: $font-size--sm;
+                  color: $text-color-a;
+                  font-weight: 500;
+                  line-height: 1.6rem;
+                  margin: 1rem 0;
+
+                  @include tablet {
+                        width: 70%;
+                        margin: 0% auto;
+                  }
+
+                 
+            }
+
+            .btn-big {
+
+                  
+                  i {
+                        margin-right: 0.4rem;
+                        color: $color-primary;
+                        font-size: $font-size-little-sm;
+                  }
+            }
+      }
+
+      .hero-image {
+            flex: 1 1 40%;
+            position: relative;
+
+            @include tablet {
+                  margin-top: 3rem;
+            }
+
+            img {
+                  border-radius: 0.4rem;
+                  -webkit-border-radius: 0.4rem;
+                  -moz-border-radius: 0.4rem;
+                  -ms-border-radius: 0.4rem;
+                  -o-border-radius: 0.4rem;
+
+                  @keyframes move {
+                        0% 
+                  }
+            }
+      }
+      .hero-image::before {
+            background: url(/images/Arrow\ 2.png);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            content: '';
+            height: 4rem;
+            width: 5rem;
+            left: -20%;
+            top: -10%;
+
+            @include tablet {
+                  display: none;
+            }
+
+
+      }
+
+      .hero-image::after {
+            background: url(/images/Icon.png);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            content: '';
+            height: 5rem;
+            width: 5rem;
+            left: -8%;
+            top: 38%;
+            cursor: pointer;
+
+            @include desktop {
+                  height: 3rem;
+                  width: 3rem;
+                  left: -5%;
+                 
+            };
+
+            @include tablet {
+                  height: 6rem;
+                  width: 6rem;
+                  left: -2%;
+                 
+            }
+
+      }
+}
+
+.faq-sec {
+      position: relative;
+
+
+      .poly-img-2 {
+            position: absolute;
+            right: 0%;
+            top: -40%;
+            display: none;
+            
+            
+             img {
+                   height: 500px;
+                   max-width: 200px;
+                   object-fit: cover;
+             }
+       }
+
+      .wrapper {
+            @include wrapper-style;
+      }
+
+      .faq-content {
+
+
+            .card {
+                  @include card;
+
+                  img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                  }
+
+                  .card-text {
+                        padding: 1.5rem;
+                        h3 {
+                              font-size: $font-size-little-sm;
+                              font-weight: 700;
+                              margin: 0.6rem 0;
+                        }
+                        p {
+                              font-size: $font-size--sm;
+                              color: $text-color-a;
+                              font-weight: 400;
+                              line-height: 1.2rem;
+                              margin: 0.6rem 0;
+                        }
+                  }
+            }
+            :hover {
+                  top: -3px;
+            }
+
+            .card {
+                  transition: all 0.5s ease-in-out;
+                  -webkit-transition: all 0.5s ease-in-out;
+                  -moz-transition: all 0.5s ease-in-out;
+                  -ms-transition: all 0.5s ease-in-out;
+                  -o-transition: all 0.5s ease-in-out;
+                  margin: 1rem;
+            }
+
+            
+      }
+
+      .flex {
+
+            @include mobile {
+                  flex-direction: column;
+            }
+      }
+}
